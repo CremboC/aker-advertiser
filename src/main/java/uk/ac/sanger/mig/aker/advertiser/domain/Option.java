@@ -24,6 +24,9 @@ public class Option extends BaseEntity {
 	@Column(nullable = false)
 	private boolean required;
 
+	@Column(nullable = false)
+	private boolean perSample;
+
 	public String getName() {
 		return name;
 	}
@@ -54,5 +57,13 @@ public class Option extends BaseEntity {
 
 	public void setRequired(boolean required) {
 		this.required = required;
+	}
+
+	public boolean isPerSample() {
+		return perSample;
+	}
+
+	public void setPerSample(boolean perSample) {
+		this.perSample = perSample;
 	}
 }

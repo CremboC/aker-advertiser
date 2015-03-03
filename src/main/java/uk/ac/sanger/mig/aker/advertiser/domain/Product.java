@@ -62,7 +62,6 @@ public class Product extends BaseEntity {
 	)
 	private Set<DataResource> outputData;
 
-
 	@ManyToMany
 	@JoinTable(
 			name = "products_options",
@@ -133,5 +132,13 @@ public class Product extends BaseEntity {
 
 	public void setReagents(Set<Biomaterial> reagents) {
 		this.reagents = reagents;
+	}
+
+	public Set<Option> getOptions() {
+		return options;
+	}
+
+	public void setOptions(Set<Option> options) {
+		this.options = options;
 	}
 }
