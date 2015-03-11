@@ -70,6 +70,9 @@ public class Product extends BaseEntity {
 	)
 	private Set<Option> options;
 
+	@Column
+	private Double unitCost;
+
 	public Set<Biomaterial> getOutputMaterial() {
 		return outputMaterial;
 	}
@@ -140,5 +143,13 @@ public class Product extends BaseEntity {
 
 	public void setOptions(Set<Option> options) {
 		this.options = options;
+	}
+
+	public Double getUnitCost() {
+		return unitCost;
+	}
+
+	public void setUnitCost(Double unitCost) {
+		this.unitCost = unitCost;
 	}
 }
